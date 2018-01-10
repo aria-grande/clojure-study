@@ -1,5 +1,20 @@
 (ns hello.core
-  (:gen-class))
+  (:gen-class)
+  (:import [redis.clients.jedis Jedis]))
+  
+; 18. Jedis 자바 라이브러리를 이용해 Redis에서 get/set 하는 클라이언트 프로그램을 작성하시오.
+; (ns hello.core
+;   (:gen-class)
+;   (:import [redis.clients.jedis Jedis]))
+;
+; (defn redis-get [key]
+;   (.get (Jedis.) key))
+; (defn redis-set [key val]
+;   (.set (Jedis.) key val))
+; (defn -main [& [cmd key val]]
+;   (println (case cmd
+;               "get" (redis-get key)
+;               "set" (redis-set key val))))
 
 ; 13. 10에서 만든 users 벡터에 특정 id 사용자를 삭제하는 remove-user라는 함수를 만들어 보시오.
 ; (defn remove-user [users id]
