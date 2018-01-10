@@ -14,20 +14,25 @@
 ;   (conj users user))
 ;
 ; (defn -main [& args]
-;   (def users [{:name "Bob" :role :manager :age 10}
-;               {:name "Aria" :role :developer :age 11}])
-;   (def new-user {:name "Tomas" :role :developer :age 20})
+;  (def users [{:name "Bob" :role :manager :age 10}
+;              {:name "Aria" :role :developer :age 11}
+;              {:name "Tomas" :role :developer :age 20}))
+;   (def new-user {:name "Tom" :role :developer :age 21})
 ;   (println (add-user users new-user)))
 
 
 ; 11. 10에서 만든 users 벡터에서 개발자의 나이를 합산하는 sum-developer-age 함수를 만들어보시오.
+; (defn developer? [user]
+;   (= :developer (:role user)))
+;
 ; (defn sum-developer-age [users]
-;   (reduce + (map (fn [u] (:age u)) (filter (fn [user] (= :developer (:role user))) users))))
+;   (reduce + (map :age (filter developer? users))))
 ;
 ; (defn -main [& args]
 ;   (def users [{:name "Bob" :role :manager :age 10}
 ;               {:name "Aria" :role :developer :age 11}
 ;               {:name "Tomas" :role :developer :age 20}])
+;
 ;   (println (sum-developer-age users)))
 
 ; 7. 여러개의 숫자를 입력 받아 해당 숫자를 모두 더하는 프로그램을 작성하시오.
