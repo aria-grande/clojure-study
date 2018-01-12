@@ -68,18 +68,16 @@ ex. clojure.core
 
 1. 컨텍스트
 - 로직, 데이터 ..
-- 예
-
-  - Maybe 모나드:연속된 계산 중 결과가 nil이면 전체 결과가 nil
-  ```clojure
+- Maybe 모나드:연속된 계산 중 결과가 nil이면 전체 결과가 nil
+  ```clojure
   (defn bind [mv f]
     (if mv
       (f mv)
       nil))
-  ```
-  - Writer 모나드: 연속된 계산 중 다른 환경에 값을 기록하고 싶은 경우
-  - State 모나드: 연속된 계산 중 읽고 쓰는 환경이 필요한 경우
-  - ...
+  ```
+- Writer 모나드: 연속된 계산 중 다른 환경에 값을 기록하고 싶은 경우
+- State 모나드: 연속된 계산 중 읽고 쓰는 환경이 필요한 경우
+- ...
 2. 연속된 계산
 ```clojure
 (((fn [x]
